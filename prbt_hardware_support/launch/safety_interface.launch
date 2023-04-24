@@ -18,13 +18,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <launch>
 
   <!-- Configure modbus settings depending on the configured safety hardware -->
-  <arg name="safety_hw" default="pss4000"/>
+  <arg name="safety_hw" default="pnoz"/>
   <arg name="read_api_spec_file" default="$(find prbt_hardware_support)/config/modbus_read_api_spec_$(arg safety_hw).yaml" />
   <arg name="write_api_spec_file" default="$(find prbt_hardware_support)/config/modbus_write_api_spec_$(arg safety_hw).yaml" />
   <arg name="modbus_server_ip" default="$(eval '192.168.0.10' if safety_hw=='pss4000' else '169.254.60.1')" />
 
   <!-- Options to enable and disable different hardware aspects -->
-  <arg name="has_braketest_support" default="true"/>
+  <arg name="has_braketest_support" default="false"/>
   <arg name="has_operation_mode_support" default="true"/>
 
   <!-- Read modbus register specifications -->

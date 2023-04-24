@@ -27,7 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   <arg name="num_registers_to_read" default="" />
 
   <!-- define the connected safety hardware -->
-  <arg name="safety_hw" default="pss4000" />
+  <arg name="safety_hw" default="pnoz" />
   <arg name="read_api_spec_file" default="$(find prbt_hardware_support)/config/modbus_read_api_spec_$(arg safety_hw).yaml" />
 
   <rosparam ns="/prbt/read_api_spec" command="load" file="$(arg read_api_spec_file)" />

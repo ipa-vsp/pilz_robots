@@ -98,4 +98,8 @@
   <!-- System info node to output robot firmware version to console -->
   <include file="$(find prbt_support)/launch/system_info.launch" />
 
+  <!-- Again Unhold Motion Controller -->
+  <node name="controller_unhold2" pkg="rosservice" type="rosservice"
+        args="call --wait /prbt/manipulator_joint_trajectory_controller/unhold"/>
+
 </launch>
